@@ -1,0 +1,168 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Red Hat Display Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/font/Red_Hat_Display/static/RedHatDisplay-Medium.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Red Hat Display Extra Bold';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/font/Red_Hat_Display/static/RedHatDisplay-ExtraBold.woff2')
+    format('woff2');
+}
+
+$cyan-600: #4d96a9;
+$cyan-300: #8fe3f9;
+$purple-600: #855fb1;
+$purple-300: #d9b8ff;
+$slate-900: #28283d;
+$slate-600: #87879d;
+$slate-300: #d1d1df;
+$white: #fafafa;
+
+%text-preset-1 {
+  font-family: 'Red Hat Display Extra Bold';
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+%text-preset-2 {
+  font-family: 'Red Hat Display Extra Bold';
+  font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+  line-height: 1.1;
+}
+
+%text-preset-3 {
+  font-family: 'Red Hat Display Extra Bold';
+  font-size: 1rem;
+  line-height: 1.1;
+  letter-spacing: 4px;
+}
+
+%text-preset-4 {
+  font-family: 'Red Hat Display Medium';
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  line-height: 1.1;
+}
+
+%text-preset-5 {
+  font-family: 'Red Hat Display Extra Bold';
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bg-purple-600 {
+  background-color: $purple-600;
+}
+
+.btn {
+  border-radius: 29px;
+  padding: 1rem 2.5rem;
+}
+
+.text-purple-300 {
+  color: $purple-300;
+}
+
+.text-slate-600 {
+  color: $slate-600;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  // position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+}
+
+.footer {
+  // position: absolute;
+  position: relative;
+  // bottom: 0;
+  background-color: $cyan-600;
+  background-image: url('./assets/images/mobile/image-footer.jpg');
+  background-size: cover;
+
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+  }
+}
+
+.step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -4.25rem;
+  left: 50%;
+  right: 50%;
+}
+
+.line {
+  width: 1px;
+  height: 80px;
+  background-color: $slate-300;
+}
+
+.step {
+  @extend %text-preset-5;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid $slate-300;
+}
+
+.footer__title {
+  @extend %text-preset-2;
+}
+
+.footer__text {
+  @extend %text-preset-4;
+}
+
+.footer__button {
+  @extend %text-preset-5;
+  align-self: center;
+}

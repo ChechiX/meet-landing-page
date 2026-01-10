@@ -1,31 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Meet landing page</title>
-</head>
-<body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Download v1.3
-  What is it?
+    <title>Frontend Mentor | Meet landing page</title>
 
-  01
-  Built for modern use
+    <link
+      rel="preload"
+      href="./assets/font/Red_Hat_Display/static/RedHatDisplay-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  Smarter meetings, all in one place
+    <link
+      rel="preload"
+      href="./assets/font/Red_Hat_Display/static/RedHatDisplay-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          class="header__image"
+          src="./assets/logo.svg"
+          alt="Meet Logo"
+          width="119"
+          height="28"
+        />
+      </a>
+    </header>
 
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+    <section>
+      <h2>Group Chat for Everyone</h2>
+      <p>
+        Meet makes it easy to connect with others face-to-face virtually and
+        collaborate across any device.
+      </p>
+      <a>Download v1.3</a>
+      <a>What is it?</a>
+    </section>
 
-  Download v1.3
-</body>
+    <main>
+      <span class="text-slate-600">01</span>
+
+      <h3>Built for modern use</h3>
+
+      <h1>Smarter meetings, all in one place</h1>
+
+      <p>
+        Send messages, share files, show your screen, and record your meetings —
+        all in one workspace. Control who can join with invite-only team access,
+        data encryption, and data export.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <div class="step-wrapper">
+        <div class="line"></div>
+        <span class="step text-slate-600">02</span>
+      </div>
+
+      <div class="footer__content">
+        <h2 class="footer__title text-white text-center">
+          Experience more together
+        </h2>
+
+        <p class="footer__text text-white text-center">
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+
+        <a class="footer__button btn text-white bg-purple-600"
+          >Download <span class="text-purple-300">v1.3</span></a
+        >
+      </div>
+    </footer>
+  </body>
 </html>
