@@ -122,7 +122,6 @@ img {
 
 body {
   min-height: 100dvh;
-  // position: relative;
 }
 
 .header {
@@ -140,6 +139,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
+  @media (min-width: 48rem) {
+    padding: 4rem 2rem;
+  }
 }
 
 .hero__images {
@@ -148,8 +151,12 @@ body {
   gap: 1.0625rem;
 
   img {
-    width: 208.5px;
     height: 160px;
+    object-fit: cover;
+
+    @media (min-width: 48rem) {
+      height: 303px;
+    }
   }
 }
 
@@ -162,6 +169,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media (min-width: 48rem) {
+      flex-direction: row;
+      justify-content: center;
+    }
 
     .download__button {
       @extend %text-preset-5;
@@ -188,7 +200,12 @@ body {
   padding: 2rem 2rem 4rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
+
+  @media (min-width: 48rem) {
+    padding-top: 3.5rem;
+  }
 }
 
 .step-wrapper {
@@ -220,8 +237,17 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 
+  @media (min-width: 48rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   img {
     border-radius: 0.5rem;
+    height: 144px;
+
+    @media (min-width: 48rem) {
+      height: 160px;
+    }
   }
 }
 
@@ -229,6 +255,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 31.5rem;
 }
 
 .title {
@@ -247,8 +274,6 @@ body {
 }
 
 .footer {
-  // position: absolute;
-  // bottom: 0;
   display: grid;
   justify-items: center;
 
