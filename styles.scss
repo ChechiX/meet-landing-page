@@ -138,6 +138,7 @@ body {
   padding-top: 4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
   column-gap: 1.0625rem;
   row-gap: 3rem;
 
@@ -189,13 +190,23 @@ body {
     .download__button {
       @extend %text-preset-5;
       align-self: center;
+      transition: background-color 0.5s ease;
     }
 
     .explanation__button {
       @extend %text-preset-5;
       align-self: center;
+      transition: background-color 0.5s ease;
     }
   }
+}
+
+.download__button--active:hover {
+  background-color: $cyan-300;
+}
+
+.explanation__button--active:hover {
+  background-color: $purple-300;
 }
 
 .hero__title {
@@ -308,6 +319,14 @@ body {
 .footer__content {
   background-image: url('./assets/images/mobile/image-footer.jpg');
   background-size: cover;
+
+  @media (min-width: 48rem) {
+    background-image: url('./assets/images/tablet/image-footer.jpg');
+  }
+
+  @media (min-width: 90rem) {
+    background-image: url('./assets/images/desktop/image-footer.jpg');
+  }
 }
 
 .blue__section {
@@ -316,6 +335,13 @@ body {
   gap: 1.5rem;
   padding: 4rem 2rem;
   background-color: rgba($color: $cyan-600, $alpha: 0.9);
+
+  @media (min-width: 90rem) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
 }
 
 .footer__title {
@@ -329,4 +355,5 @@ body {
 .footer__button {
   @extend %text-preset-5;
   align-self: center;
+  transition: background-color 0.5s ease;
 }
